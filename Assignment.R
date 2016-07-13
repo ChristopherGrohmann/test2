@@ -22,16 +22,7 @@ xtabs(onlinedata$Sale ~ onlinedata$Flyer_region + onlinedata$Firm_ad)/xtabs(onli
 #you want to test the effectiveness and synergy of flyers and display
 #ads, the following regression can be used:
 
-model1 <- glm(Sale ~ Flyer_region + Firm_ad + Flyer_region*Firm_ad, data=onlinedata, family=binomial)
-summary(model1)
 
-#5. In the two experimental conditions for online display ads, there are also 
-#people who have zero ad exposures. How do you think the conversion differs 
-#between people who have not seen a display ad in the 'firm display ad group'
-#and the 'charity display ad group'? Please explain why you assume this and 
-#after that formally test this by extending the cross tab from step 3 and 
-#the logistic regression model from step 4. Interpret the results, is there 
-#anything surprising?
 
 #Hypothesis:
 #I would expect that the poeple who have seen the frim add, have a higher porbability of conversion 
