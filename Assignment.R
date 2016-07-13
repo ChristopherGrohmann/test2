@@ -22,7 +22,7 @@ xtabs(onlinedata$Sale ~ onlinedata$Flyer_region + onlinedata$Firm_ad)/xtabs(onli
 #you want to test the effectiveness and synergy of flyers and display
 #ads, the following regression can be used:
 
-model1 <- glm(Sale ~ Flyer_region + Firm_ad + Flyer_region*Firm_ad, data=onlinedata, family=binomial)
+model1 <- glm(Sale ~ Flyer_region + Firm_ad + Flyer_region*Firm_ad, data=onlinedata, family=binomial(type = "probit"))
 summary(model1)
 
 #5. In the two experimental conditions for online display ads, there are also 
